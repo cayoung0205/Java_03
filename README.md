@@ -1,34 +1,70 @@
-## Java 100_변수
+## Java 100
 
-- static 개념, 역활
+- 메인 메서드의 특징
 
 `문제 code`
 
 ```java
-public class Java100_variable_HelloWorld4{
-	public static void main(String[] agrs){
+public class Java100_variable_HelloWorld3 {
+	public void main_method(String[] gaddonge) {
 		System.out.println("Hello World~");
 	}
 }
 ```
 
-`해설`
+`정답 code`
 
-```
-- static으로 선언된 함수(메서드)나 변수는 자바 버추얼 머신에서 인스턴스 객체의 생성 없이 호출을 할 수 있다.
-- 쉽게말해서, 객체 생성없이 해당 힘수(메서드)를 호출해서 사용할 수 있다.
-```
-
-```
-- 자바프로그램을 실행하면 static으로 지정된 메서드를 찾아서 먼저 메모리에 할당시킨다.
-- static으로 지정된 메서드가 여러개인 경우에는 객체를 생성하는 것과 상관없이 모두 메모리에 할당시킨다.
-- 그런 후에, 'main'으로 이름이 만들어진 메서드가 있는지를 찾아서 그 메서드를 가장 먼저 시작점의 메서드로써 호출을 하게 되는 것이다. 
+```java
+public class Java100_variable_HelloWorld3 {
+	public static void main(String[] gaddonge) {
+		System.out.println("Hello World~");
+	}
+}
 ```
 
-`static이 아닌 경우`
+- 설명
+
+`코드 분석`
+
+```java
+접근제한자 클래스선언 클래스명 {
+	접근제어자 static 반환타입 메인메서드(문자열 배열 변수명) {
+    	// 구현할 코드 작성
+	}
+}
+```
+
+`메인메서드`
+
+> main()
+>
+> > 반드시  **main **으로 작성
 
 ```
-class : 공장 
-class --> 객체 생성 --> 생성된 객체 class 내의 기능을 호출하여 사용
+- 만약 다르게 작성하면 기본 메서드를 찾을 수 없다라고 에러발생 
+		--> 기본메서드(main) 작성하라고 함.
+- 자바 프로그램이 실행되면 제일 먼저 메인 메서드를 찾아서 실행
+- 길게 작성된 소스에서 그 프로그램의 시작이 어딘지 알 수 없으면 안되므로 시작점을 알려주는 용도
+		--> entry point --> main()
+```
+
+`파라미터스`
+
+> (String[] gaddonge)
+
+```
+- 메서드(함수) 호출시 하나 or 둘 이상의 파라미터 값을 넣어서 호출할 수 있음.
+- 그러한 인수(파라미터)들의 값을 저장할 변수(바구니)들을 명시
+- String --> 문자열 --> []배열 --> args --> argument(논의, 논쟁, 언쟁, 말다춤, 주장; 인수, 독립변수)
+- args는 하나의 변수명일 뿐이므로 임의의 이름을 지정해도 무방.
+```
+
+`반환할타입`
+
+> void
+
+```
+- return type --> 반환할 값이 있냐? 없냐? --> 없으면 void(빈 공간, 공허함, empty)
+- 이 메서드(함수)는 호출하면 결과로써 특별히 반환되는 값은 없이 수행되는 메서드
 ```
 
